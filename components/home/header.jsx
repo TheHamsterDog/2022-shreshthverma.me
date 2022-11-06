@@ -44,6 +44,8 @@ const Header = () => {
 
         <div suppressHydrationWarning className="home-header-cover-container"><video className="home-header-cover" src="/home/cover.mp4" autoPlay muted></video></div>
         <div suppressHydrationWarning className="home-header-container">
+
+            <img className="home-header-container-photo" src="/home/image-2.jpg" />
             <h1 className="home-header-container-title">
                 Shreshth Verma
             </h1>

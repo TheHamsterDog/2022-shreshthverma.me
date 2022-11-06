@@ -17,49 +17,72 @@
         z-index: 0;
         position: absolute;
         max-width: 50vw;
-        @include respond(tablet){
+
+        @include respond(tablet) {
             // font-size: 2rem;
             display: none;
             // transform: rotate(-90deg) translateX(-4rem);
         }
+
         right: 0rem;
         bottom: 0rem;
         width: 60rem;
     }
 
     &-container {
+        &-photo {
+            max-width: 50vw;
+            border-radius: 100%;
+            width: 15rem;
+
+            @include respond(tablet) {
+                // font-size: 2rem;
+                display: block;
+                // transform: rotate(-90deg) translateX(-4rem);
+            }
+
+            display: none;
+            margin: 0 auto;
+            // text-align: center;
+        }
+
         &-timer {
             background-color: $backgroundColorFooter1;
             color: $color1;
             padding: 2rem;
             border-radius: 1rem;
-            
+
             box-shadow: 0 0 1rem rgba(#000, 0.4);
             margin-top: 2rem;
             justify-content: space-between;
 
             &-time {
                 font-size: 4rem;
-                @include respond(phone){
+
+                @include respond(phone) {
                     font-size: 2rem;
                 }
+
                 justify-content: space-between;
 
                 h3 {
                     width: 10rem;
                     text-align: center;
                     margin: 0;
-                    @include respond(tablet){
-                        &:nth-child(5){
+
+                    @include respond(tablet) {
+                        &:nth-child(5) {
                             display: none;
                         }
-                        &:nth-child(6){
+
+                        &:nth-child(6) {
                             display: none;
                         }
                     }
-                    @include respond(phone){
-                        
-                        &:nth-child(4){
+
+                    @include respond(phone) {
+
+                        &:nth-child(4) {
                             display: none;
                         }
                     }
@@ -75,28 +98,34 @@
 
                 h3 {
                     width: 10rem;
-                    @include respond(tablet){
-                        &:nth-child(5){
+
+                    @include respond(tablet) {
+                        &:nth-child(5) {
                             display: none;
                         }
-                        &:nth-child(6){
-                            display: none;
-                        }
-                    }
-                    @include respond(phone){
-                        
-                        &:nth-child(4){
+
+                        &:nth-child(6) {
                             display: none;
                         }
                     }
+
+                    @include respond(phone) {
+
+                        &:nth-child(4) {
+                            display: none;
+                        }
+                    }
+
                     text-align: center;
                     margin: 0
                 }
 
                 font-size: 1.7rem;
-                @include respond(phone){
+
+                @include respond(phone) {
                     font-size: 1.4rem;
                 }
+
                 display: flex;
             }
         }
@@ -105,11 +134,13 @@
             margin: 3rem auto;
             width: 5rem;
             height: 5rem;
-            &-icon{
+
+            &-icon {
                 font-size: 2.5rem !important;
                 color: $color1 !important;
-                
+
             }
+
             border-radius: 100%;
             align-items: center;
             justify-content: center;
@@ -133,18 +164,29 @@
         &-title {
             font-size: 5rem;
             margin: 1rem 0;
-            @include respond(phone){
+
+            @include respond(tablet) {
+                text-align: center;
+            }
+
+            @include respond(phone) {
                 font-size: 4rem;
             }
         }
 
         &-subtitle {
 
+            @include respond(tablet) {
+                text-align: center;
+            }
+
             margin-top: 1.3rem;
             margin-bottom: 0;
-            @include respond(phone){
+
+            @include respond(phone) {
                 font-size: 2.4rem;
             }
+
             font-size: 3rem;
         }
 
@@ -152,17 +194,25 @@
 
             margin-top: 1.3rem;
             font-size: 2rem;
-            @include respond(phone){
+
+            @include respond(tablet) {
+                text-align: center;
+            }
+
+            @include respond(phone) {
                 font-size: 1.6rem;
             }
         }
-        @media (max-width: 1450px){
+
+        @media (max-width: 1450px) {
             left: 50%;
         }
-        @media (max-width: 900px){
+
+        @media (max-width: 900px) {
             bottom: 40%;
             // top: 0%;
         }
+
         z-index: 2;
         bottom: 50%;
         left: 35%;
