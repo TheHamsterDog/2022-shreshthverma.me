@@ -1,6 +1,9 @@
+import Header from './header';
 const Home = () => {
     return (
-        <div></div>
+        <div suppressHydrationWarning className="home">
+            <Header />
+        </div>
     )
 }
 

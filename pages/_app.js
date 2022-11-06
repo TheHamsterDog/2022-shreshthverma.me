@@ -2,9 +2,9 @@ import '../styles/globals.css'
 import Head from 'next/head'
 function MyApp({ Component, pageProps }) {
   return (
-  <div>
+  <div suppressHydrationWarning>
     <Head>
-      <title>Shreshth Verma: </title>
+      <title>Shreshth Verma </title>
       <meta property="og:type" content='website'/> 
       <meta property='og:image' content='/image.jpg'/>
       <link rel="icon" href="/favicon.ico" />
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
       <meta charSet='utf-8'/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </Head>
-    <Component {...pageProps} />
+    <Component suppressHydrationWarning {...pageProps} />
   </div>
   )
 }

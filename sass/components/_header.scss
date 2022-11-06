@@ -1,0 +1,184 @@
+.home-header {
+    height: 70vh;
+    position: relative;
+    width: 100%;
+
+    &-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    &-photo {
+        z-index: 0;
+        position: absolute;
+        max-width: 50vw;
+        @include respond(tablet){
+            // font-size: 2rem;
+            display: none;
+            // transform: rotate(-90deg) translateX(-4rem);
+        }
+        right: 0rem;
+        bottom: 0rem;
+        width: 60rem;
+    }
+
+    &-container {
+        &-timer {
+            background-color: $backgroundColorFooter1;
+            color: $color1;
+            padding: 2rem;
+            border-radius: 1rem;
+            
+            box-shadow: 0 0 1rem rgba(#000, 0.4);
+            margin-top: 2rem;
+            justify-content: space-between;
+
+            &-time {
+                font-size: 4rem;
+                @include respond(phone){
+                    font-size: 2rem;
+                }
+                justify-content: space-between;
+
+                h3 {
+                    width: 10rem;
+                    text-align: center;
+                    margin: 0;
+                    @include respond(tablet){
+                        &:nth-child(5){
+                            display: none;
+                        }
+                        &:nth-child(6){
+                            display: none;
+                        }
+                    }
+                    @include respond(phone){
+                        
+                        &:nth-child(4){
+                            display: none;
+                        }
+                    }
+                }
+
+
+                display: flex;
+            }
+
+            &-labels {
+
+                justify-content: space-between;
+
+                h3 {
+                    width: 10rem;
+                    @include respond(tablet){
+                        &:nth-child(5){
+                            display: none;
+                        }
+                        &:nth-child(6){
+                            display: none;
+                        }
+                    }
+                    @include respond(phone){
+                        
+                        &:nth-child(4){
+                            display: none;
+                        }
+                    }
+                    text-align: center;
+                    margin: 0
+                }
+
+                font-size: 1.7rem;
+                @include respond(phone){
+                    font-size: 1.4rem;
+                }
+                display: flex;
+            }
+        }
+
+        &-scroll {
+            margin: 3rem auto;
+            width: 5rem;
+            height: 5rem;
+            &-icon{
+                font-size: 2.5rem !important;
+                color: $color1 !important;
+                
+            }
+            border-radius: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            // width: 30rem;
+            font-size: 2rem;
+            padding: .5rem 2rem;
+            transition: all 0.2s;
+            box-shadow: 0 0 0.8rem rgba(#000, 0.4);
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            background-image: linear-gradient(to bottom right, rgba($backgroundColorPrimary1, 0.4), rgba($backgroundColorPrimary2, 0.4), rgba($backgroundColorPrimary3, 0.4));
+        }
+
+        &-title {
+            font-size: 5rem;
+            margin: 1rem 0;
+            @include respond(phone){
+                font-size: 4rem;
+            }
+        }
+
+        &-subtitle {
+
+            margin-top: 1.3rem;
+            margin-bottom: 0;
+            @include respond(phone){
+                font-size: 2.4rem;
+            }
+            font-size: 3rem;
+        }
+
+        &-paragraph {
+
+            margin-top: 1.3rem;
+            font-size: 2rem;
+            @include respond(phone){
+                font-size: 1.6rem;
+            }
+        }
+        @media (max-width: 1450px){
+            left: 50%;
+        }
+        @media (max-width: 900px){
+            bottom: 40%;
+            // top: 0%;
+        }
+        z-index: 2;
+        bottom: 50%;
+        left: 35%;
+        transform: translate(-50%, 80%);
+        background-color: rgba(#fff, 0.5);
+        padding: 2rem;
+        max-width: calc(90vw - 4rem);
+        width: 90rem;
+        box-shadow: 0 0 1rem rgba(#000, 0.4);
+        position: absolute;
+        border-radius: 1.4rem;
+        backdrop-filter: blur(5px);
+        min-height: 52rem;
+
+    }
+
+    // background-size: contain;
+    background-image: radial-gradient(rgba($backgroundColorPrimary1, 0.8) 0%, rgba($backgroundColorPrimary2, 0.8) 50%, rgba($backgroundColorPrimary3, 0.8) 100%);
+}

@@ -4,3 +4,18 @@
 @import './absolutes/variables';
 @import './absolutes/typography';
 @import './absolutes/mixins';
+
+//components
+@import './components/contact';
+@import './components/demographic';
+@import './components/experience';
+@import './components/footer';
+@import './components/header';
+@import './components/navigation';
+@import './components/projects';
+@import './components/skillset';
+@import './components/socials';
+@import './components/story';
+
+//utility
+@import './utility/basic'
