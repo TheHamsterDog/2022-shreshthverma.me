@@ -20,7 +20,7 @@ const Timer = () => {
         <div className="home-header-container-timer">
             <div className="home-header-container-timer-time">
                 <h3>{state.getFullYear() - 1970}</h3>
-                <h3>{(state.getMonth() + 1).toString().length === 1 ? "0" + (state.getMonth() + 1) : (state.getMonth() + 1)}</h3>
+                <h3>{(state.getMonth()).toString().length === 1 ? "0" + (state.getMonth()) : (state.getMonth())}</h3>
                 <h3>{(state.getDate()).toString().length === 1 ? "0" + (state.getDate()) : (state.getDate())}</h3>
                 <h3>{(state.getHours()).toString().length === 1 ? "0" + (state.getHours()) : (state.getHours())}</h3>
                 <h3>{(state.getMinutes()).toString().length === 1 ? "0" + (state.getMinutes()) : (state.getMinutes())}</h3>

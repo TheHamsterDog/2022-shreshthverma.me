@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import Head from 'next/head'
 function MyApp({ Component, pageProps }) {
   return (
-  <div suppressHydrationWarning>
+  <div >
     <Head>
       <title>Shreshth Verma </title>
       <meta property="og:type" content='website'/> 
