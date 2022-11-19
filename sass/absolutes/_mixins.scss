@@ -4,6 +4,11 @@
             @content;
         }
     }
+    @if($breakpoint == 'sd'){
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
     @if($breakpoint == 'phone'){
         @media (max-width: 576px) {
             @content;

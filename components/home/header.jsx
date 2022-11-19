@@ -21,7 +21,7 @@ const Timer = () => {
             <div className="home-header-container-timer-time">
                 <h3>{state.getFullYear() - 1970}</h3>
                 <h3>{(state.getMonth()).toString().length === 1 ? "0" + (state.getMonth()) : (state.getMonth())}</h3>
-                <h3>{(state.getDate()).toString().length === 1 ? "0" + (state.getDate()) : (state.getDate())}</h3>
+                <h3>{(state.getDate() - 1 ).toString().length === 1 ? "0" + (state.getDate() - 1) : (state.getDate() - 1)}</h3>
                 <h3>{(state.getHours()).toString().length === 1 ? "0" + (state.getHours()) : (state.getHours())}</h3>
                 <h3>{(state.getMinutes()).toString().length === 1 ? "0" + (state.getMinutes()) : (state.getMinutes())}</h3>
                 <h3>{(state.getSeconds()).toString().length === 1 ? "0" + (state.getSeconds()) : (state.getSeconds())}</h3>
@@ -57,7 +57,9 @@ const Header = () => {
             </p>
             <h2 className="home-header-container-subtitle">I have been alive for</h2>
             <Timer />
-            <button className='home-header-container-scroll'><ArrowDownwardIcon className='home-header-container-scroll-icon' /></button>
+            <button className='home-header-container-scroll' onClick={()=>{
+                window.scrollTo(0, 800)
+            }}><ArrowDownwardIcon className='home-header-container-scroll-icon' /></button>
         </div>
         <img className="home-header-photo" src="/home/Subject.png" />
     </section>)

@@ -4,7 +4,7 @@
 @import './absolutes/variables';
 @import './absolutes/typography';
 @import './absolutes/mixins';
-
+@import './absolutes/animations';
 //components
 @import './components/contact';
 @import './components/demographic';
@@ -16,6 +16,5 @@
 @import './components/skillset';
 @import './components/socials';
 @import './components/story';
-
 //utility
 @import './utility/basic'

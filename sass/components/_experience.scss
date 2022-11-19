@@ -1,0 +1,209 @@
+.home-experience {
+    max-width: 150rem;
+    margin: 20rem auto;
+    padding: 1rem;
+    overflow: hidden;
+
+    @include respond(sd) {
+        margin: 20rem auto;
+        width: 90%;
+        max-width: 100rem;
+    }
+
+    @include respond(tablet) {
+        margin: 30rem auto;
+        width: 80%;
+        max-width: 80rem;
+    }
+
+
+
+    input[type=radio] {
+        display: none;
+    }
+
+    &-container {
+        position: relative;
+        @include respond(tablet) {
+            height: auto;
+        }
+        height: 80vh;
+
+        #Initiatives:checked~&-title {
+            div:nth-child(1) {
+                left: 21.5rem;
+                width: 13.6rem;
+            }
+           
+        }
+
+        #Student:checked~&-title {
+            div:nth-child(1) {
+                left: 36.5rem;
+                width: 29.7rem;
+            }
+        }
+
+        #Student:checked~&-each {
+            &:nth-child(5) {
+
+                transform: translateX(-200vw);
+            }
+
+            &:nth-child(6) {
+                transform: translateX(-100vw);
+            }
+
+            &:nth-child(7) {
+                transform: translateX(0vw);
+            }
+        }
+
+        #Initiatives:checked~&-each {
+            &:nth-child(5) {
+
+                transform: translateX(-100vw);
+            }
+
+            &:nth-child(6) {
+                transform: translateX(0vw);
+            }
+
+            &:nth-child(7) {
+                transform: translateX(100vw);
+            }
+        }
+
+
+        &-each {
+            transition: all 0.6s;
+            ;
+
+            &:nth-child(6) {
+                transform: translateX(100vw);
+            }
+
+            &:nth-child(7) {
+                transform: translateX(100vw);
+            }
+            @include respond(tablet) {
+                position: relative;;
+                
+                transform: translateX(0) !important;
+                // height: auto;
+            }
+            padding: 1rem;
+            overflow: auto;
+            height: 100%;
+            width: calc(100% - 2rem);
+            position: absolute;
+
+            &-items {
+                @include respond(tablet) {
+                    display: block;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 0;
+
+                }
+
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: flex-start;
+                margin-bottom: 10rem;
+                grid-gap: 2rem;
+            }
+
+            &-item {
+                cursor: pointer;
+
+                &-in {
+                    margin: 0;
+                    overflow: hidden;
+                    transition: all 0.2s;
+                    animation: topIn .3s;
+                }
+
+
+
+                &-time {
+                    margin: 0;
+                }
+
+                user-select: none;
+                border-radius: 1.2rem;
+                padding: 2rem;
+                transition: all 0.3s !important;
+                max-width: 60rem;
+                box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+                margin: 3rem 0;
+                font-size: 2rem;
+
+                &-link {
+                    color: $color2;
+
+                    // text-decoration: none;
+                    &:hover {
+                        // color: $color-black;
+                    }
+                }
+            }
+
+            &-title {
+                margin: 6rem 0 0;
+                font-size: 3rem;
+            }
+
+            &-paragraph {
+                font-size: 1.8rem;
+            }
+        }
+
+        &-title {
+            @include respond(tablet) {
+                display: none;
+            }
+            &-underline {
+                transition: all 0.3s;
+                height: 0.4rem;
+                width: 17.2rem;
+                top: 4.8rem;
+                @include respond(tablet) {
+                    top: 3.75rem;
+                    width: 11rem;
+                }
+
+                left: 1.9rem;
+                position: absolute;
+                background-color: $color1;
+            }
+
+            padding: 2rem;
+            border-radius: 1rem;
+            color: $color1;
+            background-image: linear-gradient(to right, $backgroundColorFooter2, $backgroundColorSecondary2);
+            width: 63.7rem;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+
+            @include respond(tablet) {
+                max-width: 80%;
+            }
+            
+            label {
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                @include respond(tablet) {
+                    font-size: 1.6rem;
+                }
+
+                cursor: pointer;
+                margin-right: 2.4rem;
+                text-transform: uppercase;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
