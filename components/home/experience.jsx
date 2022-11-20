@@ -52,12 +52,14 @@ let initiatives = [{
 let studentGovernment = [{
     name: "Student Council, DPS Kolar ",
     position: "Senior Cyber Director",
-    timeFrame: "2021-2022",
+    timeFrame: "2021-2023",
+    description: "Produced video, image, and promotional content for the school, helped teachers and students with technological issues, and maintained discipline on the school campus. "
 },
 {
-    name: "Student Council, DPS Kolar",
-    timeFrame:"2022-2023",
-    position: "Senior Cyber Director"
+    name: "Techno Club, DPS Kolar Road Bhopal",
+    description:"Organized the club, helped members create their projects, gave presentations to get students interested in STEM, and taught and mentored students",
+    timeFrame: "2021-2023",
+    position: "President"
 },
 ]
 
@@ -78,7 +80,7 @@ const Each = (props) => {
             <h5 className='home-experience-container-each-item-time'>{item.timeFrame}</h5>
 
             <p className='home-experience-container-each-item-description'>{item.description}</p>
-        </div>: null}
+        </div> : null}
     </div>)
 }
 const Experience = () => {
@@ -119,6 +121,7 @@ const Experience = () => {
 
                     })}
                 </div>
+
 
             </div>
             <div className='home-experience-container-each'>

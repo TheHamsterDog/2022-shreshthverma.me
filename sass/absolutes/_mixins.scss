@@ -3,6 +3,11 @@
         @media (max-width: 768px) {
             @content;
         }
+    };
+    @if($breakpoint == 'ssd'){
+        @media (max-width: 900px) {
+            @content;
+        }
     }
     @if($breakpoint == 'sd'){
         @media (max-width: 1200px) {
@@ -11,6 +16,11 @@
     }
     @if($breakpoint == 'phone'){
         @media (max-width: 576px) {
+            @content;
+        }
+    }
+    @if($breakpoint == 'small-phone'){
+        @media (max-width: 400px) {
             @content;
         }
     }

@@ -1,0 +1,20 @@
+@keyframes topIn {
+    from{
+        max-height: 0;
+        
+    }
+    to{
+        max-height: 40rem;
+    }
+}
+@keyframes topOut {
+    from{
+        max-height: 40rem;
+    }
+    to{
+        
+        // color: #fff;
+        max-height: .4rem !important;
+        
+    }
+}
